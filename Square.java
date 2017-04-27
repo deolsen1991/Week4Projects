@@ -12,26 +12,31 @@ public class Square implements Colorable {
     
     private int side;
     
+    //no argument constructor
     public Square()
     {
         side = 0;
     }
     
+    //constructor to implement the number of sides
     public Square(int numSides)
     {
         this.side = numSides;
     }
     
+    //accessor for the side variable
     public int getSide()
     {
         return side;
     }
     
+    //mutator for the sides
     public void setSide(int side)
     {
         this.side = side;
     }
     
+    //howToColor overridden from the interface
     @Override
     public void howToColor()
     {
@@ -40,6 +45,7 @@ public class Square implements Colorable {
     
 }
 
+//interface class as required
 interface Colorable
 {
     public abstract void howToColor();

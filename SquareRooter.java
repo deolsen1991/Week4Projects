@@ -9,11 +9,12 @@ public class SquareRooter {
     public static void main(String[] args) {
         try
         {
-           System.out.println("calling sqrRoot with 4");
+            System.out.println("calling sqrRoot with 4");
             System.out.println("sqr root of 4 is " + sqrRoot(4));
             System.out.println("calling sqrRoot with -1");
             System.out.println("sqr root of -1 is " + sqrRoot(-1));
         }
+        
         catch (SquareRootArgumentException e)
         {
             e.printStackTrace();
@@ -22,6 +23,7 @@ public class SquareRooter {
     
     static double sqrRoot(double val) throws SquareRootArgumentException
     {
+        //if else for if it should calculate the value or throw the exception
         if(val >= 0)
         {
             return Math.sqrt(val);
@@ -34,6 +36,7 @@ public class SquareRooter {
     
 }
 
+//the required square root exception class
 class SquareRootArgumentException extends IllegalArgumentException
 {
     SquareRootArgumentException(String msg)
